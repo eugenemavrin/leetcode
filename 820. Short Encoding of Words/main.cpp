@@ -40,10 +40,10 @@ public:
         // Memory Usage: 17.4 MB, 74%
         unordered_set<string> set(words.begin(), words.end());
 
-        for (const auto &s : set) {
-            int len = s.length();
+        for (const auto &w : words) {
+            int len = w.length();
             for (int i = 1; i < len; i++) {
-                set.erase(s.substr(len - i, i));
+                set.erase(w.substr(len - i, i));
             }
         }
 
